@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>WASM test</title>
+  </head>
+
+  <body>
+    <script>
+      WebAssembly.instantiateStreaming(fetch('helloworld.wasm'))
+      .then(obj => {
+        var h = new Uint8Array(obj.instance.exports.memory.buffer);
+        var p = obj.instance.exports.hello();
+
+        function utf8ToString(h, p) {
+          let s = "";
+          for (i = p; h[i]; i++) {
+            s += String.fromCharCode(h[i]);
+          }
+          return s;
+        }
+
+        document.write(utf8ToString(h, p));
+      });
+    </script>
+  </body>
+</html>

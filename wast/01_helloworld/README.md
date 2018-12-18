@@ -1,6 +1,6 @@
 # HOWTO
 
-If you're interested in the code snippets, you might want to read [Understanding WebAssembly text format
+If you're interested in understanding the WAST code snippets, you might want to read [Understanding WebAssembly text format
 ](https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format) first.
 
 Build WASM module:
@@ -9,7 +9,7 @@ Build WASM module:
 $ wat2wasm helloworld.wat -o helloworld.wasm
 ```
 
-This will produce `helloworlrd.wasm` binary. In order to see what it does you need to write some HTML and JavaScript which will load the code and run the exported `add` function.
+This will produce `helloworld.wasm` binary. In order to see what it does you need to write some HTML and JavaScript which will load the code and run the exported `add` function.
 
 If you want to invoke `add` function in WAST code you can do so as follows:
 ```
