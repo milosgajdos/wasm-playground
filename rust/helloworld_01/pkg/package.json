@@ -1,0 +1,21 @@
+{
+  "name": "@milosgajdos/helloworld_01",
+  "collaborators": [
+    "Milos Gajdos <milosgajdos83@gmail.com>"
+  ],
+  "description": "A sample project with wasm-pack",
+  "version": "0.1.0",
+  "license": "MIT/Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/milosgajdos83/wasm-playground"
+  },
+  "files": [
+    "helloworld_01_bg.wasm",
+    "helloworld_01.js",
+    "helloworld_01.d.ts"
+  ],
+  "module": "helloworld_01.js",
+  "types": "helloworld_01.d.ts",
+  "sideEffects": "false"
+}

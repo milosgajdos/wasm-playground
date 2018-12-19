@@ -1,0 +1,13 @@
+[package]
+name = "helloworld_01"
+version = "0.1.0"
+authors = ["Milos Gajdos <milosgajdos83@gmail.com>"]
+description = "A sample project with wasm-pack"
+license = "MIT/Apache-2.0"
+repository = "https://github.com/milosgajdos83/wasm-playground"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2"

@@ -9,6 +9,8 @@ In order to get something meaningful out of following the cruft stored in this r
 * `CMake` **version 3.2 or higher** ([homebrew](https://brew.sh/) formula/package is available for macOS users)
 * You need to install WABT: [The WebAssembly Binary Toolkit](https://github.com/WebAssembly/wabt)
 * You need to install [Emscripten](https://kripken.github.io/emscripten-site/docs/getting_started/downloads.html) Toolkit
+* You need to install [Rust](https://www.rust-lang.org/tools/install) and its toolchain
+* You need to install [nodejs](https://www.npmjs.com/get-npm) (yes, JavaScript headaches will inevitably ensue)
 * You need a browser which supports WASM. In my case that's [firefox](https://www.mozilla.org/en-GB/firefox/new/) which has WASM enabled by default in version 52+
 
 ## WABT
