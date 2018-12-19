@@ -1,0 +1,10 @@
+(module
+  (type (;0;) (func (result i32)))
+  (import "js" "table" (table (;0;) 1 anyfunc))
+  (func (;0;) (type 0) (result i32)
+    i32.const 16)
+  (memory (;0;) 1)
+  (export "memory" (memory 0))
+  (export "world" (func 0))
+  (elem (;0;) (i32.const 0) 0)
+  (data (;0;) (i32.const 16) "Hello World\00"))

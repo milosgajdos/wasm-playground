@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>WASM test</title>
+  </head>
+
+  <body>
+    <script>
+      var importObj = {
+        js: {
+          table : new WebAssembly.Table({ initial: 1, element: "anyfunc" })
+        }
+      };
+      Promise.all([
+        WebAssembly.instantiateStreaming(fetch('hello.wasm'), importObj),
+        WebAssembly.instantiateStreaming(fetch('world.wasm'), importObj)
+      ]).then(obj => {
+        var p = obj[0].instance.exports.hello();
+        var h = new Uint8Array(obj[1].instance.exports.memory.buffer);
+
+        function utf8ToString(h, p) {
+          let s = "";
+          for (i = p; h[i]; i++) {
+            s += String.fromCharCode(h[i]);
+          }
+          return s;
+        }
+
+        document.write(utf8ToString(h, p));
+      });
+    </script>
+  </body>
+</html>

@@ -33,7 +33,7 @@ Data[1]:
   - 0000010: 4865 6c6c 6f20 576f 726c 6400            Hello World.
 ```
 
-You can see the function definition type, its position in the function table, memory allocation and their exports.
+You can see the function definition type, its position in the function table, memory allocation (initially at least 1 page) and then exports of both the function and memory with particular names.
 Finally you can see the module's data containing 16 signed integers and the content of the data (Hello World string)
 
 You can also reverse the WASM binary back to WAST:
