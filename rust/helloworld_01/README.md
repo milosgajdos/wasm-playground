@@ -38,9 +38,9 @@ Replace the existing `package.json` file content with the snipped shown below --
     "serve": "webpack-dev-server"
   },
   "devDependencies": {
-    "webpack": "^4.25.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.0",
+    "webpack-dev-server": ">=3.1.11"
   }
 }
 ```
